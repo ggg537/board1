@@ -1,5 +1,5 @@
-# 1. 자바 17 버전 환경을 가져온다
-FROM openjdk:17-jdk-slim
+# 1. (수정됨) AWS에서 제공하는 안정적인 Java 17 버전 사용
+FROM amazoncorretto:17
 
 # 2. 빌드된 jar 파일을 도커 안으로 가져온다
 ARG JAR_FILE=build/libs/*.jar
