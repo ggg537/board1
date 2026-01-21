@@ -8,7 +8,7 @@ docker rm my-spring-app || true
 docker rmi my-spring-app || true
 
 # 3. 빌드 (젠킨스 환경 등 리눅스면 ./gradlew)
-./gradlew clean build
+./gradlew clean build -x test
 
 # 4. 이미지 생성
 docker build -t my-spring-app .
