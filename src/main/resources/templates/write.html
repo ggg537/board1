@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>글쓰기</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h2>글 작성</h2>
+<form action="/board/write" method="post" onsubmit="return validateForm()">
+  <div class="form-group">
+    <label>제목</label>
+    <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+  </div>
+  <div class="form-group">
+    <label>작성자</label>
+    <input type="text" name="writer" id="writer" placeholder="이름">
+  </div>
+  <div class="form-group">
+    <label>내용</label>
+    <textarea name="content" id="content" placeholder="내용을 입력하세요"></textarea>
+  </div>
+  <button type="submit" class="btn">저장</button>
+  <a href="/board/list" class="btn btn-red">취소</a>
+</form>
+
+<script>
+  function validateForm() {
+    var title = document.getElementById('title').value;
+    var content = document.getElementById('content').value;
+    if (title == "" || content == "") {
+      alert("제목과 내용은 필수입니다.");
+      return false;
+    }
+    return true;
+  }
+</script>
+</body>
+</html>
