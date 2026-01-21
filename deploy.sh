@@ -19,7 +19,7 @@ docker build -t my-spring-app .
 docker run -d \
   --name my-spring-app \
   -p 8081:8080 \
-  --network board1_my-network \
+  --network app_my-network \
   -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql_server:3306/board_db?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true" \
   -e SPRING_DATASOURCE_USERNAME=root \
   -e SPRING_DATASOURCE_PASSWORD=root \
