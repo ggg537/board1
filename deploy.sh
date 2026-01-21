@@ -18,7 +18,7 @@ docker build -t my-spring-app .
 # SPRING_DATASOURCE_URL: mysql_server(컨테이너이름)으로 직접 접속
 docker run -d \
   --name my-spring-app \
-  -p 8080:8080 \
+  -p 8081:8080 \
   --network root_my-network \
   -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql_server:3306/board_db?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true" \
   -e SPRING_DATASOURCE_USERNAME=root \
